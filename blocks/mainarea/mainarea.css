@@ -1,0 +1,86 @@
+.mainarea-container {
+  background-color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mainarea-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.mainarea.block > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Logo */
+.mainarea.block picture {
+  flex: 0 0 auto;
+  width: 300px;
+  display: block;
+}
+
+/* Contact container */
+.mainarea.block > div > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+
+.mainarea.block p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #003057;
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+.mainarea.block p .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fba91a; 
+  border-radius: 50%;
+}
+
+.mainarea.block p .icon img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(500%) hue-rotate(180deg); 
+}
+
+@media (max-width: 768px) {
+  .mainarea.block > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mainarea.block picture {
+    width: 140px;
+  }
+
+  .mainarea.block > div > div:last-child {
+    justify-content: center;
+  }
+
+  .mainarea.block p {
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+}

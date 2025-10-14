@@ -1,27 +1,143 @@
+/* SECTION CONTAINER */
+.cards-container {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 15px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.cards-container picture,
+.cards-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+.cards-container h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: white;
+}
+
+.cards-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 32px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 240px;
 }
 
 .cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(100%) contrast(100%);
+}
+
+.cards .cards-card-body .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  min-height: 64px;
+}
+
+
+.cards .cards-card-body .icon img {
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain;
+  display: block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+.cards > ul > li img {
+  all: unset;
+}
+
+
+.cards .cards-card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+
+.cards .cards-card-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.cards .cards-card-body ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.cards .cards-card-body ul li::before {
+  content: "✔"; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fba91a; 
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    padding: 60px 16px;
+  }
+
+  .cards-container h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .cards > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards > ul > li {
+    min-height: auto;
+  }
 }

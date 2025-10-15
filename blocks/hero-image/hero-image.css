@@ -1,0 +1,16 @@
+﻿.hero-image-wrapper {
+    max-width: 100% !important;
+}
+.section.hero-image {
+    margin: 0;
+}
+.section.hero-image > div {
+    padding: 0;
+}
+
+.hero-image img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}

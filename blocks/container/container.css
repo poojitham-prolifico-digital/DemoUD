@@ -1,0 +1,102 @@
+﻿:root {
+    --body-font-family: roboto, roboto-fallback, sans-serif;
+    --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+}
+
+/* fallback fonts */
+@font-face {
+    font-family: roboto-condensed-fallback;
+    size-adjust: 88.82%;
+    src: local('Arial');
+}
+
+@font-face {
+    font-family: roboto-fallback;
+    size-adjust: 99.529%;
+    src: local('Arial');
+}
+
+.section.container-container {
+    position: relative;
+    width: 100vw;
+    padding: 0;
+    background: #062a55;
+    margin: 0px !important;
+}
+.section.container-container p {
+    margin: 0 auto;
+    font-size: 16px;
+    color: white;
+}
+.container a {
+    color: white;
+    text-decoration: underline;
+
+}
+.container h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font-family);
+}
+
+.container p {
+    font-family: var(--body-font-family);
+}
+.container .container-inner {
+    max-width: 1100px;
+    margin: 0 auto; 
+    text-align: center; 
+    color: #fff;
+}
+
+.container .container-copy {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.65;
+    color: #e7eef7;
+}
+
+.container .container-copy p {
+     margin: 0 0 10px;
+}
+
+.container .container-copy a {
+    color: #d6e6ff;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .container-wrapper {
+        padding: 48px 20px;
+    }
+
+    .container .container-copy {
+        max-width: 640px;
+    }
+}
+
+.section.container-container > .container-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+.section.container-container h1,
+.section.container-container h2 {
+    color: #fff;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+main > .section.container-container {
+    margin: 0;
+}
+@media (max-width: 900px) {
+    .section.container-container > .container-wrapper {
+        padding: 48px 16px;
+    }
+}

@@ -1,49 +1,37 @@
 .eyebrow-container {
   background-color: #FBA919;
   color: #000;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Roboto Regular", sans-serif;
   font-size: 16px;
-  letter-spacing: 0.3px;
-  width: 100%; /* ensure full width */
+  width: 100%;
 }
 
-.eyebrow-wrapper {
-  padding: 0 20px; /* optional horizontal padding */
-
-  width: 100%; /* take full width of page */
-}
 
 .eyebrow {
   display: flex;
-  justify-content: flex-end; /* move text fully right */
-  align-items: center;
+  justify-content: flex-end; 
+  /* align-items: center; */
   text-align: right;
-  padding: 12px 20px; /* vertical + horizontal spacing */
-  line-height: 1.4;
+  padding: 12px 35px; 
+ 
 }
 
 .eyebrow p {
   margin: 0;
   padding: 0;
-  color: #000;
-  font-weight: 400; /* normal text */
+  color: rgb(0, 0, 0);
+  font-weight: 600; 
 }
 
-.eyebrow p strong {
-  font-weight: 400; /* normal weight for strong text */
-}
 
 .eyebrow a {
-  color: #000;
-  text-decoration: underline;
-  font-weight: 600; /* bold link */
+  color: rgb(0, 0, 0);
 }
-
 
 
 @media (max-width: 768px) {
   .eyebrow {
-    justify-content: center; /* center on mobile */
+    justify-content: center; 
     text-align: center;
     padding: 10px 20px;
   }

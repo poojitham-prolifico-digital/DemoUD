@@ -33,7 +33,7 @@
 
 .form.block > div {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 29px 45px; 
   margin-bottom: 32px;
 }
@@ -54,13 +54,17 @@
   width: 100%;
   padding: 14px 16px;
   border: none;
-  border-left: 6px solid #fba91a;
-  border-radius: 6px;
+  border-left: 8px solid #fba91a;
+  
   font-size: 16px;
   font-family: inherit;
   background-color: white;
   color: #001D4C;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.form-input[name="message"] {
+  min-height: 130px; 
+  resize: vertical;
 }
 
 .form.block > div > div:last-child {

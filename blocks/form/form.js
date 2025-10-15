@@ -1,6 +1,6 @@
 export default function decorate(block) {
   const fieldLabels = [
-    'First name', 'Last name', 'PH No', 'Email', 'Confirm Email', 'Message'
+    'First Name', 'Last Name', 'Phone Number', 'Email Address', 'Confirm Email', 'Message'
   ];
 
   const fieldContainers = Array.from(block.querySelectorAll(':scope > div > div'));
@@ -13,7 +13,7 @@ export default function decorate(block) {
     input.className = 'form-input';
     input.required = true;
 
-    container.innerHTML = ''; // Clear <p>
+    container.innerHTML = ''; 
     container.appendChild(input);
   });
 }

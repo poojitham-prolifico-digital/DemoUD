@@ -1,10 +1,12 @@
 
 .bottomfooter-container {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  background-color: #001D4C; 
+  width: 100vw; 
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); 
+  background-color: #001D4C;
   color: white;
-  padding: 60px 24px 40px; 
+  padding: 60px 24px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.6;
@@ -12,6 +14,7 @@
   height: 550px;
   border-top: 5px solid #fba91a;
 }
+
 
 .bottomfooter-container .bottomfooter-wrapper {
   max-width: 1200px;

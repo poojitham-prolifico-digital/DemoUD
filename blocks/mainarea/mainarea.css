@@ -3,6 +3,7 @@
   padding: 1rem 0;
   display: flex;
   justify-content: center;
+  height: 177px;
 }
 
 .mainarea-wrapper {
@@ -24,23 +25,27 @@
   flex: 0 0 auto;
   width: 300px;
   display: block;
+  padding-left: 30px;
 }
 
 /* Contact container */
 .mainarea.block > div > div:last-child {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+  padding-top: 70px;
+  padding-right: 48px;
 }
 
 
 .mainarea.block p {
+  font-family:"Roboto Medium", sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 600;
   color: #003057;
   margin: 0;
@@ -52,16 +57,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #fba91a; 
+  width: 35px;
+  height: 35px;
+  background-color: rgb(251, 169, 25); 
   border-radius: 50%;
 }
 
 .mainarea.block p .icon img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(500%) hue-rotate(180deg); 
+  width: 15px;
+  height: 18px;
+  /* filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(500%) hue-rotate(180deg);  */
 }
 
 @media (max-width: 768px) {

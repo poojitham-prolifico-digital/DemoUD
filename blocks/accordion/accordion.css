@@ -7,7 +7,6 @@
   justify-content: center;
 }
 
-/* Wrapper centers the block */
 .accordion-wrapper {
   width: 100%;
   max-width: 1200px;
@@ -16,8 +15,6 @@
 }
 
 
-/* Main content block */
-/* Main content block */
 .accordion.block {
   width: 100%;
   max-width: 750px;
@@ -29,17 +26,6 @@
   box-sizing: border-box; 
 }
 
-.accordion.block::after {
-  content: "";
-  display: block;
-  margin-top: 3rem;    
-  height: 1px;          
-  background-color: #ccc; 
-  width: 100%;
-}
-
-
-/* Each accordion section */
 .accordion.block > div {
   display: flex;
   flex-direction: column;
@@ -92,6 +78,14 @@
 
 .accordion.block a:hover {
 text-decoration: none;
+}
+.accordion.block > div:first-child {
+  margin-top: 3rem; 
+}
+.accordion-container {
+  padding-top: 40px;
+  padding-bottom: 50px;
+
 }
 
 /* Responsive layout */

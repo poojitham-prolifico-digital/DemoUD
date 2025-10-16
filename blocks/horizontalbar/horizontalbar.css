@@ -1,0 +1,22 @@
+/* Container section */
+.horizontalbar-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.horizontalbar-wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontalbar.block > div > div:first-child {
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
+  height: 1px;
+  background-color: #e9e7e7; 
+  margin-top: 3rem; 
+  margin-bottom: 3rem; 
+}

@@ -10,3 +10,26 @@ main > .section > div {
 main > .section:first-of-type {
   margin-top: 0;
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+main {
+    overflow-x: clip;
+}
+body {
+    margin: 0;
+}
+body.appear {
+    margin: 0 !important;
+}
+img, video, svg, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

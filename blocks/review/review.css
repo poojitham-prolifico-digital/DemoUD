@@ -7,6 +7,13 @@
   color: white;
   overflow: hidden;
 }
+.review-container .default-content-wrapper{
+    max-width: 800px;         
+  margin: 0 auto;           
+  padding: 0 1rem;          
+  box-sizing: border-box;
+  text-align: center;       
+}
 
 /* BACKGROUND IMAGE FROM PICTURE TAG */
 .review-container .default-content-wrapper picture img {
@@ -61,7 +68,7 @@ padding: 0 24px;
 }
 
 .review-container .review.block > div > div {
-  flex: 0 0 340px; /* wider cards */
+  flex: 0 0 340px; 
   background-color: rgba(255, 255, 255, 0.95);
   padding: 1px 20px 10px;
   color: #001D4C;
@@ -69,7 +76,7 @@ padding: 0 24px;
   scroll-snap-align: start;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   height: auto;
-  min-height: 220px; /* ✅ ensures rectangular shape */
+  min-height: 220px; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

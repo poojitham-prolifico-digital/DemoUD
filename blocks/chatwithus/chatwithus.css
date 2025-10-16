@@ -1,0 +1,32 @@
+
+.chatwithus-container {
+  position: fixed;
+  bottom: 24px;     
+  right: -18px;       
+  z-index: 9999;     
+  width: auto;
+  height: auto;
+
+}
+.chatwithus-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.chatwithus.block picture,
+.chatwithus.block img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  
+ 
+}
+
+
+@media (max-width: 768px) {
+  .chatwithus.block img {
+    width: 70px;
+    height: 70px;
+  }
+}

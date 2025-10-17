@@ -1,0 +1,42 @@
+.section.image-container > .image-wrapper {
+    max-width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.image {
+    margin-bottom: 2rem;
+}
+    .image.img-center-align {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image.img-left-align {
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .image.img-right-align {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+    }
+    .image .cmp-image {
+        max-width: 100%;
+    }
+        .image .cmp-image img,
+        .image .cmp-image picture,
+        .image .cmp-image source {
+            max-width: 100%;
+            height: auto;
+        }
+    .image .cmp-image__image {
+        width: auto;
+        height: auto;
+    }
+    .image img {
+        vertical-align: middle;
+        border-style: none;
+    }

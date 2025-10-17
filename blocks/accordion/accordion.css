@@ -17,8 +17,8 @@
 
 .accordion.block {
   width: 100%;
-  max-width: 750px;
-  padding-left: 2rem;  
+  max-width: 850px;
+  padding-left: 60px;
   padding-right: 2rem; 
   display: flex;
   flex-direction: column;
@@ -44,9 +44,8 @@
 
 /* Paragraphs */
 .accordion.block p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Regular", sans-serif;
   font-size: 16px;
-  font-weight: 400;
   color: #333333;
   line-height:24px ;
   margin: 0 0 1rem 0;
@@ -59,7 +58,7 @@
 }
 
 .accordion.block li {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Regular", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #333333;

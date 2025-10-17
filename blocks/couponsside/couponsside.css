@@ -1,0 +1,277 @@
+
+.section.accordion-container,
+.section.couponsside-container {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-left: 40px;
+  margin-left: 40px;
+}
+.section.accordion-container {
+  width:60%;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-left: 40px;
+  margin-left: 40px;
+ 
+}
+.section.couponsside-container {
+  width: 39%;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin-top: 40px; 
+  padding-left: 40px;
+  margin-left: 40px;
+}
+
+.couponsside-wrapper {
+
+   margin-top: 40px;
+  padding-top: 30px;
+}
+.couponsside-container .couponsside.block {
+  transform: scale(0.92);
+  transform-origin: top left;
+
+ 
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.couponsside-container .couponsside.block picture img {
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.section.accordion-container {
+  width: 60%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 40px;
+  margin-left: 40px;
+}
+
+.right-column {
+  width: 39%;
+  float: right;
+  box-sizing: border-box;
+  padding-left: 40px;
+  margin-left: 40px;
+}
+
+
+.section.content-card-container {
+  margin-bottom: 40px; 
+}
+
+.section.couponsside-container {
+  margin-top: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 1024px) {
+  .section.accordion-container,
+  .right-column {
+    float: none;
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section.accordion-container,
+  .section.couponsside-container {
+    display: block;
+    width: 100%;
+  }
+  .couponsside-container .couponsside.block {
+    transform: none;
+  }
+  .couponsside-container .couponsside.block picture img {
+    max-width: 100%;
+  }
+}
+
+.couponsside-container {
+  padding: 60px 24px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.couponsside-container .default-content-wrapper h3 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.couponsside-container .default-content-wrapper{
+  margin: 0 auto;           
+  padding: 0 1rem;         
+  box-sizing: border-box;
+  text-align: center;  
+  padding-top: 20px;
+}
+.couponsside-container .couponsside.block > div:first-child picture img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.couponsside-container .couponsside.block > div:first-child {
+  padding: 0;
+  margin: 0;
+}
+.couponsside-container .coupons-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0;
+}
+.couponsside-container .couponsside.block {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px dashed #979797;
+}
+
+.couponsside-container .couponsside.block > div:first-child > div:nth-child(2) {
+  margin-top: 16px;
+display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding-left: 24px;
+}
+.couponsside-container .couponsside.block > div:first-child > div:nth-child(2) p {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.couponsside-container .couponsside.block .icon-specialcoupon img {
+  width: 66px;
+  height: 76px;
+margin-right: 8px;
+  vertical-align: middle;
+  padding-top:24px ;
+}
+.couponsside-container .couponsside.block > div:first-child > div:nth-child(2) p:last-child {
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  font-family: "Roboto Regular", sans-serif;
+  cursor: pointer;
+  
+  display: flex;
+  justify-content:flex-start;
+  gap: 4px;
+  padding-left: 110px;
+  margin-top: -30px;
+}
+.couponsside-container .couponsside.block > div:nth-child(2) {
+  text-align:l;
+  padding:40px 24px;
+}
+.couponsside-container .couponsside.block > div:nth-child(2) p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 800px;
+  color: rgb(33, 37, 41);
+  font-family: "Roboto Regular", sans-serif;
+}
+.couponsside-container .couponsside.block > div:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001D4C;
+  color: white;
+  padding: 24px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.couponsside-container .couponsside.block > div:nth-child(3) > div:first-child {
+  flex: 1;
+  min-width: 200px;
+}
+.couponsside-container .couponsside.block > div:nth-child(3) > div:first-child p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  text-align: left;
+  
+}
+
+.couponsside-container .couponsside.block > div:nth-child(3) > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 160px;
+}
+.couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p {
+      font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  background-color: #fba919;
+  color: #001D4C;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 140px;
+  border-radius: 24px;
+}
+.couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p a{
+  color: #001D4C;
+  text-decoration: none;
+}
+.couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p:hover {
+  background-color: #e79404;
+}
+.couponsside-container .couponsside.block {
+  margin-bottom: 60px; 
+}
+@media (max-width: 768px) {
+  .coupons-container .coupons.block > div:nth-child(3) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .coupons-container .coupons.block > div:nth-child(3) > div:last-child {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p {
+    min-width: 120px;
+  }
+}

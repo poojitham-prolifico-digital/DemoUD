@@ -247,8 +247,12 @@ margin-right: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
-  min-width: 140px;
+
   border-radius: 24px;
+  width: 160px;          
+  box-sizing: border-box; 
+  white-space: nowrap;   
+
 }
 .couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p a{
   color: #001D4C;

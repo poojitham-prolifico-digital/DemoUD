@@ -1,0 +1,105 @@
+﻿/* GRID: make 4 per row on xl screens  */
+.normal-card.block {
+    margin-bottom: 32px;
+}.normal-card .nc-grid {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 1fr;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8px 16px;
+}
+
+@media (min-width: 640px) {
+    .normal-card .nc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .normal-card .nc-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1280px) {
+    .normal-card .nc-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* CARD: big title, soft gradient, equal height*/
+.normal-card .nc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px 24px;
+    background: linear-gradient(180deg,#fff 0,rgba(0,118,178,0.2) 100%);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    height: auto;
+    text-align: center;
+}
+.normal-card .nc-title {
+    margin: 0;
+    font-size: 2rem; 
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0b0b0b;
+}
+
+.normal-card .nc-desc {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2b2b2b;
+    text-align:center;
+}
+.normal-card .nc-cta {
+    margin-top: auto;
+}
+.normal-card .nc-btn {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .15);
+    padding: .5rem 1.5rem;
+    color: #000;
+    background-image: none;
+    background-color: #fba919;
+    box-shadow: none;
+    line-height: inherit;
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--body-font-family);
+    max-width: fit-content;
+    margin-top: auto;
+    align-self: center; 
+}
+.normal-card .nc-btn:hover,
+.normal-card .nc-btn:focus-visible {
+    transform: translateY(-1px);
+    filter: brightness(0.98);
+}
+.normal-card .nc-grid > .nc-card:only-child {
+    grid-column: 1 / -1; 
+    padding: 40px 32px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.normal-card .nc-grid > .nc-card:only-child .nc-title {
+    font-size: clamp(28px, 2.2vw + 16px, 40px);
+    line-height: 1.2;
+    margin: 0 0 8px;
+}
+.normal-card .nc-grid > .nc-card:only-child .nc-desc {
+    margin: 0 auto 20px;
+}
+.normal-card .nc-grid > .nc-card:only-child .nc-btn {
+    display: inline-flex;
+    align-self: center; 
+    margin: 0 auto;
+}

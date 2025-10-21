@@ -1,10 +1,12 @@
 ﻿.section.content-cards-container {
     margin: 40px 0;
 }
-.section.content-cards-container > .content-cards-wrapper {
-    max-width: 100%;
-    width: 100%;
-}
+    .section.content-cards-container > .content-cards-wrapper {
+        max-width: 100%;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 .content-cards-wrapper {
     padding: 56px 24px;
 }

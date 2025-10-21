@@ -15,11 +15,9 @@
 }
 
 .form-container .default-content-wrapper {
-  max-width: 800px;         
-  margin: 0 auto;           
-  padding: 0 1rem;         
   box-sizing: border-box;
-  text-align: center;       
+  text-align: left;  
+  margin-left: 20px;     
 }
 .form-container h2 {
   font-size: 30px;

@@ -1,6 +1,7 @@
 ﻿/* GRID: make 4 per row on xl screens  */
 .normal-card.block {
     margin-bottom: 32px;
+    margin-top: 32px;
 }.normal-card .nc-grid {
     display: grid;
     gap: 28px;

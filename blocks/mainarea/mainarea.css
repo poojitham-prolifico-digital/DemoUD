@@ -7,7 +7,7 @@
 }
 .mainarea-container {
   position: fixed;
-  top: 87px; /* 44 + 44 */
+  top: 86px; /* 44 + 44 */
   left: 0;
   width: 100%;
   z-index: 1280;

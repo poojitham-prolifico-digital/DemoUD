@@ -145,7 +145,7 @@ main > .section > div {
 }
 .section.megamenu-container {
   position: fixed;
-  top: 264px; 
+  top: 263px; 
   left: 0;
   width: 100%;
   z-index: 1270;
@@ -156,4 +156,11 @@ body::before {
   content: "";
   display: block;
   height: 315px; 
+}
+.megamenu > div:has(.icon-search-wrapper):hover > div:last-child {
+  display: none !important;
+  background-color: transparent !important;
+}
+.icon-search-wrapper.active:hover {
+  background-color: transparent !important;
 }

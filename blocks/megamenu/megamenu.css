@@ -17,13 +17,6 @@ main > .section > div {
  
   padding: 0 45px;
 }
-/* .megamenu-wrapper {
-  max-width: 100px;    
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 .megamenu-wrapper {
   max-width: 1200px;
@@ -149,4 +142,18 @@ main > .section > div {
 
 .icon-search {
   cursor: pointer;
+}
+.section.megamenu-container {
+  position: fixed;
+  top: 264px; 
+  left: 0;
+  width: 100%;
+  z-index: 1270;
+  background-color: #001d4c;
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 315px; 
 }

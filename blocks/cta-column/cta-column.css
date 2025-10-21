@@ -1,0 +1,62 @@
+.section.cta-column-container {
+    background: #0d1b48; 
+}
+.section .cta-column-wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.section.cta-column-container .cta-column.block > div:first-child h2 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.2;
+    font-family: var(--heading-font-family);
+}
+.section.cta-column-container .cta-column.block > div:last-child p {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 9999px;
+    background: #f7a707;
+    color: #0b0b0b;
+    font-weight: 800;
+    text-transform: none;
+    line-height: 1;
+    box-shadow: 0 2px 0 rgba(0,0,0,.2);
+    user-select: none;
+    cursor: default;
+    font-family: var(--body-font-family);
+}
+.section.cta-column-container .cta-column.block > div:last-child p .icon {
+    font-size: 1.1em;
+    line-height: 0;
+    display: inline-block;
+}
+.section.cta-column-container .cta-column.block > div:last-child p:hover {
+    transform: translateY(-1px);
+    filter: brightness(.98);
+}
+.section.cta-column-container .cta-column.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.section.cta-column-container .cta-column.block > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.section.cta-column-container .cta-column.block > div > div:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    align-self: center;
+}
+

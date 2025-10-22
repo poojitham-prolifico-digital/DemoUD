@@ -46,3 +46,20 @@
 .block.button {
     text-align: center;
 }
+.mainarea-container .button-wrapper {
+    align-self: center;
+    padding-top: 25px;
+    padding-left: 0px;
+}
+
+.mainarea-container .block.button {
+    padding-left: 0px;
+}
+
+.mainarea-container .mainarea.block > div > div:last-child {
+    padding-right: 0px;
+}
+
+.mainarea-container .mainarea-wrapper {
+    padding-right: 24px;
+}

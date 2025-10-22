@@ -1,58 +1,82 @@
-﻿function readConfigFromBlock(block) {
+﻿function getPlainTextExcludingIcons(el) {
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll('span.icon').forEach((n) => n.remove());
+  return clone.textContent.replace(/\u00A0/g, ' ').replace(/\uFF1A/g, ':').trim();
+}
+function getTableConfig(block) {
   const cfg = {};
   const rows = [...block.querySelectorAll(':scope > div')];
-  rows.forEach((row) => {
+  for (const row of rows) {
     const cells = [...row.children];
-    if (cells.length === 1) return;
-    if (cells.length >= 2) {
-      const key = cells[0].textContent.trim().toLowerCase();
-      const val = cells[1].textContent.trim();
-      cfg[key] = val;
+    if (cells.length < 2) continue;
+
+    const key = cells[0].textContent.trim().toLowerCase();
+    const valEl = cells[1];
+
+    if (key === 'label') {
+      const raw = valEl.textContent.replace(/\u00A0/g, ' ').replace(/\uFF1A/g, ':').trimStart();
+      const m = /^:([a-z0-9-]+):\s*(.*)$/i.exec(raw);
+
+      // 2) already-decorated icon?
+      const iconSpan = valEl.querySelector('span.icon');
+
+      if (m) {
+        cfg.__icon = m[1].toLowerCase();
+        cfg.label = (m[2] || '').trim();
+      } else if (iconSpan) {
+        const mm = /icon-([a-z0-9-]+)/i.exec(iconSpan.className);
+        if (mm) cfg.__icon = mm[1].toLowerCase();
+        cfg.label = getPlainTextExcludingIcons(valEl);
+      } else {
+        cfg.label = getPlainTextExcludingIcons(valEl);
+      }
+    } else {
+      cfg[key] = getPlainTextExcludingIcons(valEl);
     }
-  });
+  }
   return cfg;
-}function createBaseButton(label) {
+}
+
+function injectIconSpan(iconName) {
+  const icon = document.createElement('span');
+  icon.className = `icon icon-${iconName}`;
+  const img = document.createElement('img');
+  img.src = `/icons/${iconName}.svg`;
+  img.alt = iconName;
+  img.width = 18;
+  img.height = 18;
+  icon.appendChild(img);
+  return icon;
+}
+
+export default function decorate(block) {
+  const cfg = getTableConfig(block);
+  const label = (cfg.label ?? '').trim();                  
+  const iconName = (cfg.__icon || '').trim(); 
+  const schedulerId = cfg['scheduler id'] || cfg['schedulerid'];
+  const extraClass = cfg['class'];
+
+  block.replaceChildren();
+
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.className = 'button primary';
-  btn.textContent = label || 'Book Now!';
-  return btn;
-}
 
-function attachScheduler(btn, schedulerId) {
-  btn.setAttribute(
-    'onclick',
-    `_scheduler.show({ schedulerId: '${schedulerId}' })`
-  );
-  btn.addEventListener('click', () => {
-    try {
-      if (window._scheduler && typeof window._scheduler.show === 'function') {
-        window._scheduler.show({ schedulerId });
-      }
-    } catch (e) {
-      console.warn('Scheduling Pro not available yet.');
-    }
-  });
-}
-export default function decorate(block) {
-  const cfg = readConfigFromBlock(block);
-
-  const label = cfg['label'] || 'Book Now!';
-  const schedulerId = cfg['scheduler id'] || cfg['schedulerid'];
-  const className = cfg['class'];
-  block.textContent = '';
-
-  const buttonEl = createBaseButton(label);
-  if (schedulerId && className) {
-    attachScheduler(buttonEl, schedulerId);
-    buttonEl.className = `button primary ${className}`.trim();
-  } else if (schedulerId) {
-    attachScheduler(buttonEl, schedulerId);
-  } else if (className) {
-    buttonEl.className = `button primary ${className}`.trim();
+  if (iconName) {
+    btn.classList.add('with-icon');
+    btn.appendChild(injectIconSpan(iconName));
+    const txt = document.createElement('span');
+    txt.className = 'label';
+    txt.textContent = label;
+    btn.appendChild(txt);
   } else {
-    buttonEl.disabled = true;
-    buttonEl.title = 'Provide either "Scheduler ID" or "Class" in the block.';
+    btn.textContent = label;
   }
-  block.appendChild(buttonEl);
+  if (schedulerId) {
+    btn.setAttribute('onclick', `_scheduler.show({ schedulerId: '${schedulerId}' })`);
+    btn.addEventListener('click', () => window._scheduler?.show?.({ schedulerId }));
+  }
+  if (extraClass) btn.classList.add(extraClass);
+
+  block.appendChild(btn);
 }

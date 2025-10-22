@@ -1,41 +1,52 @@
-.button {
-    padding: 0.85rem 1.25rem;
-    text-align: center;
+.button{
+    padding:20px;
 }
 .button.primary {
-        font: inherit;
-        background: #fba919;
-        color: #000;
-        box-shadow: none;
-        display: inline-flex;
-        align-items: center;
-        font-weight: 700;
-        text-decoration: none;
-        padding: .5rem 1.5rem;
-        border: 0;
-        background-image: none;
-        line-height: inherit;
-        border-radius: 1.5rem;
-        text-transform: uppercase;
-        font-family: var(--body-font-family);
-        max-width: fit-content;
-        margin-top: auto;
-        cursor: pointer;
-        align-self: center;
-        white-space: nowrap;
+    background: transparent;
+    font-weight: 700;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0px;
+    white-space: nowrap;
+    font-family: "Roboto Medium", sans-serif;
+    align-items: center;
+    font-size: 18px;
+    color: #003057;
+    margin: 0;
+    line-height: 1.4;
 }
-.button.primary:hover {
-        background-color: #e79404;
-        transition: .5s;
+.button.primary.with-icon {
+    gap: 10px;
 }
-.button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.button.primary.with-icon .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(251, 169, 25);
+    border-radius: 50%;
+}
+.button .label {
+    font-family: "Roboto Medium", sans-serif;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: #003057;
+    margin: 0;
+    line-height: 1.4;
+    white-space: nowrap;
 }
 .mainarea-container .button-wrapper {
     align-self: center;
-    padding-top: 25px;
+    padding-top: 80px;
     padding-left: 0px;
+    padding-right: 80px;
 }
 
 .mainarea-container .block.button {

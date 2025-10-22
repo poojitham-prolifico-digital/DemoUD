@@ -1,4 +1,4 @@
-.form-container { 
+ .form-container { 
     display: block; 
     justify-content: center !important; 
     align-items: center; 
@@ -6,7 +6,7 @@
     padding: 10px 45px !important;
   }
 
-.default-content-wrapper{ 
+  .form-container .default-content-wrapper{ 
     color:#fff; 
     text-align: center; 
     font-size: 18px; 

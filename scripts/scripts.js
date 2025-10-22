@@ -12,6 +12,15 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import decorateForm from '../blocks/form/form.js';
+function decorateCustomBlocks(main) {
+  main.querySelectorAll('.block').forEach((block) => {
+    const blockName = block.dataset.blockName;
+    if (blockName === 'form') {
+      decorateForm(block);
+    }
+  });
+}
 
 /**
  * Builds hero block and prepends to main in a new section.
@@ -83,6 +92,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateCustomBlocks(main);
 }
 
 /**

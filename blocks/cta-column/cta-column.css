@@ -27,18 +27,19 @@
     line-height: 1;
     box-shadow: 0 2px 0 rgba(0,0,0,.2);
     user-select: none;
-    cursor: default;
+    cursor: pointer;
     font-family: var(--body-font-family);
 }
+
 .section.cta-column-container .cta-column.block > div:last-child p .icon {
     font-size: 1.1em;
     line-height: 0;
     display: inline-block;
 }
-.section.cta-column-container .cta-column.block > div:last-child p:hover {
-    transform: translateY(-1px);
-    filter: brightness(.98);
-}
+    .section.cta-column-container .cta-column.block > div:last-child p:hover {
+        background-color: #e79404;
+        transition: .5s;
+    }
 .section.cta-column-container .cta-column.block {
     display: flex;
     flex-direction: column;

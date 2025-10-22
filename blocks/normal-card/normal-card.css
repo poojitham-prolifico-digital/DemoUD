@@ -77,11 +77,11 @@
     margin-top: auto;
     align-self: center; 
 }
-.normal-card .nc-btn:hover,
-.normal-card .nc-btn:focus-visible {
-    transform: translateY(-1px);
-    filter: brightness(0.98);
-}
+    .normal-card .nc-btn:hover,
+    .normal-card .nc-btn:focus-visible {
+        background-color: #e79404;
+        transition: .5s;
+    }
 .normal-card .nc-grid > .nc-card:only-child {
     grid-column: 1 / -1; 
     padding: 40px 32px; 

@@ -37,18 +37,6 @@ function buildHeroBlock(main) {
   }
 }
 
-function loadExternalScript(src, async = true) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = src;
-    script.async = async;
-    
-    script.setAttribute('data-cfasync', 'false');
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
-    document.head.appendChild(script);
-  });
-}
 
 /**
  * load fonts.css and set a session storage flag
@@ -115,7 +103,6 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
   
-    await loadExternalScript('//assets.adobedtm.com/33a48fe0d360/f48e66b0042e/launch-334819eace76.min.js');
 
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);

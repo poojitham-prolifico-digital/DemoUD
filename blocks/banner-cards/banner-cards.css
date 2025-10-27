@@ -1,5 +1,4 @@
-﻿/* --- SECTION WRAPPER: full page width --- */
-.section.banner-cards-container > .banner-cards-wrapper {
+﻿.section.banner-cards-container > .banner-cards-wrapper {
     max-width: 100%;
     width: 100%;
     margin-inline: auto;
@@ -148,3 +147,20 @@
     line-height: 1.35; 
     color: #111;
 }
+.wg-icon {
+    display: inline-block;
+    font-family: var(--wg-icons-font-family);
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: middle;
+    font-size: 18px;
+}
+.wg-icon::before {
+        content: "";
+}
+.wg-icon-arrow_forward_ios_black_24dp::before {
+    content: "\eaed";
+    font-family: "WG-Icons";
+}
+

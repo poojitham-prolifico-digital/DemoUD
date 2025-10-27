@@ -14,14 +14,13 @@ export default function decorate(block) {
       rows = rowNodes;
     }
   }
-if (!rows.length) {
-    return;
-  }
+
+  if (!rows.length) return;
+
   const getText = (el) => (el?.textContent || '').trim().toLowerCase();
   const getCells = (row) => {
     if (mode === 'table') return [...row.querySelectorAll('td,th')];
-    const cells = row ? [...row.children] : [];
-    return cells;
+    return row ? [...row.children] : [];
   };
 
   let dataRows = rows;
@@ -43,22 +42,25 @@ if (!rows.length) {
     const li = document.createElement('li');
     li.className = 'cc-card';
     const media = imgCell?.querySelector?.('picture, img');
-    if (media) {
-      const wrap = document.createElement('div');
-      wrap.className = 'cc-media';
-      wrap.append(media.cloneNode(true));
-      li.append(wrap);
-    }
-
+    const mediaWrap = document.createElement('div');
+    mediaWrap.className = 'cc-media';
+    if (media) mediaWrap.append(media.cloneNode(true));
     const panel = document.createElement('div');
     panel.className = 'cc-panel';
 
-    const titleText = (titleCell?.textContent || '').trim();
-    if (titleText) {
-      const h3 = document.createElement('h3');
-      h3.textContent = titleText;
-      panel.append(h3);
+    // Pull the authored title text AND link (if any)
+    const titleTextOriginal = (titleCell?.textContent || '').trim();
+    const titleLinkEl = titleCell?.querySelector?.('a');
+    const titleTextForAria =
+      (titleLinkEl?.textContent || titleTextOriginal || '').trim();
+
+    const h3 = document.createElement('h3');
+    if (titleLinkEl && titleLinkEl.href) {
+      h3.textContent = titleTextForAria;
+    } else if (titleTextOriginal) {
+      h3.textContent = titleTextOriginal;
     }
+    if (h3.textContent) panel.append(h3);
 
     const bodyHTML = bodyCell?.innerHTML || '';
     if (bodyHTML) {
@@ -67,10 +69,23 @@ if (!rows.length) {
       copy.innerHTML = bodyHTML;
       panel.append(copy);
     }
+    if (titleLinkEl && titleLinkEl.href) {
+      const a = document.createElement('a');
+      a.className = 'cc-card__link'; 
+      a.href = titleLinkEl.href;
+      if (titleLinkEl.target) a.target = titleLinkEl.target;
+      if (titleLinkEl.rel) a.rel = titleLinkEl.rel;
+      if (titleTextForAria) a.setAttribute('aria-label', titleTextForAria);
+      a.append(mediaWrap, panel);
+      li.classList.add('has-link'); 
+      li.append(a);
+    } else {
+      li.append(mediaWrap, panel);
+    }
 
-    li.append(panel);
     list.append(li);
   });
+
   block.innerHTML = '';
   block.append(list);
 }

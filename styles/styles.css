@@ -16,3 +16,8 @@ html, body {
 body {
     margin: 0;
 }
+:root {
+    --body-font-family: roboto, roboto-fallback, sans-serif;
+    --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+    --wg-icons-font-family: WG-Icons, sans-serif;
+}

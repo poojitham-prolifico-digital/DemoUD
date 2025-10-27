@@ -30,7 +30,10 @@
     cursor: pointer;
     font-family: var(--body-font-family);
 }
-
+.section.cta-column-container .cta-column.block > div:last-child a {
+    text-decoration: none;
+    color: #000;
+}
 .section.cta-column-container .cta-column.block > div:last-child p .icon {
     font-size: 1.1em;
     line-height: 0;

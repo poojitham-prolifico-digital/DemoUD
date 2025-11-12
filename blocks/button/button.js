@@ -53,7 +53,7 @@ export default function decorate(block) {
   const cfg = getTableConfig(block);
   const label = (cfg.label ?? '').trim();                  
   const iconName = (cfg.__icon || '').trim(); 
-  const schedulerId = cfg['scheduler id'] || cfg['schedulerid'];
+  const schedulerId = cfg['scheduler id'] || cfg['schedulerid'] || cfg['scheduler id#'];
   const extraClass = cfg['class'];
 
   block.replaceChildren();
@@ -73,9 +73,24 @@ export default function decorate(block) {
     btn.textContent = label;
   }
   if (schedulerId) {
-    btn.setAttribute('onclick', `_scheduler.show({ schedulerId: '${schedulerId}' })`);
-    btn.addEventListener('click', () => window._scheduler?.show?.({ schedulerId }));
+    btn.classList.add('se-booking-show');
+    btn.dataset.schedulerid = schedulerId;
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      let tries = 30;
+      (function openWhenReady() {
+        if (window._scheduler && typeof window._scheduler.show === 'function') {
+          window._scheduler.show({ schedulerId });
+        } else if (tries--) {
+          setTimeout(openWhenReady, 120);
+        } else {
+          console.warn('Scheduler not ready; gave up.');
+        }
+      })();
+    });
   }
+
   if (extraClass) btn.classList.add(extraClass);
 
   block.appendChild(btn);

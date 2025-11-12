@@ -73,24 +73,9 @@ export default function decorate(block) {
     btn.textContent = label;
   }
   if (schedulerId) {
-    btn.classList.add('se-booking-show');
-    btn.dataset.schedulerid = schedulerId;
-
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      let tries = 30;
-      (function openWhenReady() {
-        if (window._scheduler && typeof window._scheduler.show === 'function') {
-          window._scheduler.show({ schedulerId });
-        } else if (tries--) {
-          setTimeout(openWhenReady, 120);
-        } else {
-          console.warn('Scheduler not ready; gave up.');
-        }
-      })();
-    });
+    btn.setAttribute('onclick', `_scheduler.show({ schedulerId: '${schedulerId}' })`);
+    btn.addEventListener('click', () => window._scheduler?.show?.({ schedulerId }));
   }
-
   if (extraClass) btn.classList.add(extraClass);
 
   block.appendChild(btn);

@@ -150,3 +150,21 @@ async function loadPage() {
 }
 
 loadPage();
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.se-booking-show');
+  if (!btn) return;
+
+  e.preventDefault();
+  const schedulerId = btn.dataset.schedulerid;
+
+  let tries = 25;
+  (function openWhenReady() {
+    if (window._scheduler && typeof window._scheduler.show === 'function') {
+      window._scheduler.show({ schedulerId });
+    } else if (tries--) {
+      setTimeout(openWhenReady, 120);
+    } else {
+      console.warn('Scheduler not ready yet; gave up opening.');
+    }
+  }());
+});

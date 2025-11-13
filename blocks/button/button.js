@@ -53,7 +53,7 @@ export default function decorate(block) {
   const cfg = getTableConfig(block);
   const label = (cfg.label ?? '').trim();                  
   const iconName = (cfg.__icon || '').trim(); 
-  const schedulerId = cfg['scheduler id'] || cfg['schedulerid'] || cfg['scheduler id#'];
+  const schedulerId = cfg['scheduler id'] || cfg['schedulerid'];
   const extraClass = cfg['class'];
 
   block.replaceChildren();

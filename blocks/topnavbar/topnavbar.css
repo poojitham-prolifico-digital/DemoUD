@@ -73,3 +73,7 @@ body, main, .section {
   text-decoration: underline;
   color: rgb(255, 255, 255);
 }
+.section .topnavbar-wrapper {
+    max-width: 100%;
+    margin: 0 60px;
+}

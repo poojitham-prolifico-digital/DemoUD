@@ -1,100 +1,155 @@
-.mainarea-container {
-  background-color: #fff;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  height: 177px;
+﻿.section.mainarea-container {
+    background-color: #fff;
+    position: fixed;
+    top: 86px;
+    left: 0;
+    width: 100%;
+    z-index: 1280;
 }
-.mainarea-container {
-  position: fixed;
-  top: 86px; /* 44 + 44 */
-  left: 0;
-  width: 100%;
-  z-index: 1280;
-}
-
-.mainarea-wrapper {
-  max-width: 1200px;
-  width: 100%;
+.mainarea-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
 }
 
-.mainarea.block > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 100%;
-  padding-top: 25px;
+/* full row: logo | reviews | phone + button */
+.mainarea.block .mainarea-inner {
+    max-width: 1400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(24px, 4vw, 48px);
+    padding: 24px clamp(1.5rem, 5vw, 3.75rem);
+    padding-right: 0px;
 }
 
-/* Logo */
-.mainarea.block picture {
-  flex: 0 0 auto;
-  width: 300px;
-  display: block;
-  padding-left: 30px;
+/* left: logo */
+.mainarea-logo {
+    flex: 0 0 auto;
 }
 
-/* Contact container */
-.mainarea.block > div > div:last-child {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding-top: 70px;
-  padding-right: 48px;
+    .mainarea-logo picture,
+    .mainarea-logo img {
+        display: block;
+        width: 320px;
+        max-width: 100%;
+        cursor: pointer;
+    }
+
+/* middle: Google reviews badge */
+.mainarea-reviews {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section .mainarea-wrapper {
+    padding: 0px !important;
+    max-width: 100%;
+}
+    .mainarea-reviews .reviews-badge iframe {
+        width: 420px;
+        max-width: 100%;
+        height: 56px;
+        border: none;
+        padding-left:30px;
+    }
+
+/* right: phone + schedule button */
+.mainarea-cta {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(32px, 4vw, 48px);
 }
 
-
-.mainarea.block p {
-  font-family:"Roboto Medium", sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 18px;
-  font-weight: 600;
-  color: #003057;
-  margin: 0;
-  line-height: 1.4;
-  cursor: pointer;
+/* PHONE pill – match prod */
+.mainarea-phone {
+    font-family: "Roboto Medium", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: #003057;
+    margin: 0;
+    line-height: 1.4;
+    cursor: pointer;
 }
 
+    .mainarea-phone .icon,
+    .mainarea-button.with-icon .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background-color: #fba91a;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 
-.mainarea.block p .icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  background-color: rgb(251, 169, 25); 
-  border-radius: 50%;
+        .mainarea-phone .icon img,
+        .mainarea-button.with-icon .icon img {
+            width: 16px;
+            height: 16px;
+        }
+
+/* SCHEDULE NOW button – piggyback on global .button.primary */
+.mainarea-button.button.primary {
+    background: transparent;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    white-space: nowrap;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 18px;
+    color: #003057;
+    margin: 0;
+    line-height: 1.4;
 }
 
-.mainarea.block p .icon img {
-  width: 15px;
-  height: 18px;
-  /* filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(500%) hue-rotate(180deg);  */
+    .mainarea-button.button.primary.with-icon {
+        gap: 10px;
+    }
+
+.mainarea-button .label {
+    font-weight: 700;
+}
+
+/* responsive tweaks */
+@media (max-width: 1024px) {
+    .mainarea.block .mainarea-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 16px;
+    }
+
+    .mainarea-cta {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
-  .mainarea.block > div {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .mainarea.block .mainarea-inner {
+        flex-direction: column;
+        padding: 16px;
+    }
 
-  .mainarea.block picture {
-    width: 140px;
-  }
+    .mainarea-logo picture,
+    .mainarea-logo img {
+        width: 240px;
+    }
 
-  .mainarea.block > div > div:last-child {
-    justify-content: center;
-  }
-
-  .mainarea.block p {
-    font-size: 1.1rem;
-    justify-content: center;
-  }
+    .mainarea-phone,
+    .mainarea-button .label {
+        font-size: 16px;
+    }
 }
+

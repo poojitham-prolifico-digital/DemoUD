@@ -179,7 +179,7 @@
     flex-wrap: nowrap ;
   }
   .bottomfooter-container .bottomfooter.block > div:first-child > div:first-child > p:nth-of-type(2) {
-    padding-top: 80px;
+    padding-top: 50px;
   }
   .bottomfooter-container .bottomfooter.block > div:first-child > div:nth-child(1) {
     width: auto;

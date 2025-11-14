@@ -163,4 +163,9 @@
     content: "\eaed";
     font-family: "WG-Icons";
 }
-
+@media (max-width: 768px) {
+    .section.banner-cards-container > .banner-cards-wrapper {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}

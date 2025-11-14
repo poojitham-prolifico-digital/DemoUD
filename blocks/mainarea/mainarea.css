@@ -138,18 +138,124 @@
 
 @media (max-width: 768px) {
     .mainarea.block .mainarea-inner {
-        flex-direction: column;
-        padding: 16px;
+        padding: 0px;
     }
 
     .mainarea-logo picture,
     .mainarea-logo img {
-        width: 240px;
+        width: auto;
+        height: 57px;
+        max-width: 100%;
+        padding-left: 10px;
+        Padding-top: 10px;
+    }
+    .mainarea-logo picture {
+        padding-top: 10px;
     }
 
-    .mainarea-phone,
-    .mainarea-button .label {
-        font-size: 16px;
-    }
+        .mainarea-phone,
+        .mainarea-button .label {
+            font-size: 13px;
+        }
 }
+@media (max-width: 768px) {
+    /* whole block becomes one column */
+    .section.mainarea-container {
+        top:80px;
+    }
+    .mainarea.block .mainarea-inner {
+        display: block;
+        text-align: left;
+        margin: 0px;
+    }
 
+    /* logo centered */
+    .mainarea-logo {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start !important; /* ⬅ PUSH LOGO LEFT */
+        margin-bottom: 1rem;
+    }
+
+    /* right column content centered */
+    .mainarea-right {
+        align-items: center;
+        max-width: 100%;
+        gap: 12px;
+        background: #001d4c;
+
+    }
+
+    .mainarea-reviews {
+        display: none;
+    }
+
+        .mainarea-reviews .reviews-badge iframe {
+            max-width: 260px;
+            width: 100%;
+        }
+
+    /* phone + button stacked vertically and centered */
+    .mainarea-cta {
+        margin-top: 0;
+        padding: 14px 24px 16px;
+        background-color: #001d4c; /* dark blue bar */
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    /* make phone + button behave like 2 equal columns */
+    .mainarea-phone,
+    .mainarea-button {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column; /* icon on top, text below */
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        text-align: center;
+        color: #ffffff;
+    }
+        .mainarea-button .label {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* round gold icons like live site */
+        .mainarea-phone .icon,
+        .mainarea-button .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #f9b233; /* gold */
+        }
+        .mainarea-button.button.primary.with-icon{
+            gap:8px;
+        }
+        .mainarea-phone {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+    .mainarea-button {
+        background: none;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+        .mainarea-button .label {
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+}

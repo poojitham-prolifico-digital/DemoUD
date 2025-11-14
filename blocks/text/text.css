@@ -52,4 +52,11 @@
     .text .cmp-text p {
         margin-bottom: 1.5rem;
     }
+
+}
+@media (max-width: 768px) {
+    .section.text-container > .text-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

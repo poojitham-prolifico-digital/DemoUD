@@ -163,3 +163,14 @@ body::before {
 .icon-search-wrapper.active:hover {
   background-color: transparent !important;
 }
+@media (max-width: 768px) {
+    .section.megamenu-container {
+        display:none;
+    }
+    body::before {
+        height: 236px;
+    }
+    header nav .nav-hamburger {
+        display: none !important;
+    }
+}

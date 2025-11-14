@@ -31,7 +31,6 @@ function createIconSpan(name) {
 }
 
 export default function decorate(block) {
-  console.log('decorate mainarea');
 
   const cfg = getConfig(block);
 

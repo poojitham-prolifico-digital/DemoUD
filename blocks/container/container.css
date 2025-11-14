@@ -84,4 +84,10 @@ main > .section.container-container {
         padding: 48px 16px;
     }
 }
+@media (max-width: 768px) {
+    .section.container-container > .container-wrapper {
+        margin-left:20px;
+        margin-right:20px;
+    }
+} 
 

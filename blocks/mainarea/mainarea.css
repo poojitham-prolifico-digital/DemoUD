@@ -183,7 +183,7 @@
         max-width: 100%;
         gap: 12px;
         background: #001d4c;
-
+        border-bottom: .1875rem solid #fba919;
     }
 
     .mainarea-reviews {

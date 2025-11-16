@@ -18,3 +18,19 @@
     margin: 0 auto;
     width: 90%;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .section.form-container > div {
+    padding: 0;
+  }
+  .form-container {
+    padding: 20px 12px ;
+  }
+  .form-wrapper {
+    width: 100% ;
+  }
+  .form-wrapper iframe {
+    width: 100% ;
+    max-width: 100% ;
+  }
+}

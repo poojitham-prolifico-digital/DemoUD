@@ -1,13 +1,9 @@
-
-
 .section.accordion-container,
 .section.default-card-container {
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
 }
-
-
 
 .section.default-card-container {
   float: right;
@@ -16,7 +12,6 @@
   margin-top: 0;
   clear: none;
 }
-
 
 .default-card-wrapper {
   max-width: 100%;
@@ -35,7 +30,6 @@
   box-sizing: border-box;
 }
 
-
 @media (max-width: 1024px) {
   .section.default-card-container {
     float: none;
@@ -43,15 +37,11 @@
     display: block;
     margin-top: 2rem;
   }
-
   .default-card-container .default-card.block {
     transform: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
-
-
-
-
 
 .default-card {
   background-image: linear-gradient(180deg, #fff 0%, rgba(0, 118, 178, 0.2) 100%);
@@ -102,13 +92,13 @@
   text-align: center;
   width: 100%;
   background-color: rgb(251, 169, 25);
-    color: #000;
+  color: #000;
   border-radius: 24px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-margin-top: 1rem;
+  margin-top: 1rem;
   padding: 0 1rem;
   cursor: pointer;
 }
@@ -116,4 +106,47 @@ margin-top: 1rem;
 
 .default-card blockquote p:hover {
   background-color: rgb(231, 148, 4);
+}
+@media (max-width: 767px) {
+  .default-card-wrapper {
+    position: relative ;
+    left: 0 ;
+    right: 0 ;
+    width: 100% ;
+    display: flex ;
+    justify-content: center ;
+    margin: 0 auto ;
+    padding: 0 ;
+    box-sizing: border-box ;
+  }
+  .section.default-card-container {
+    float: none ;
+    width: 100% ;
+    margin-top: 1.5rem ;
+    text-align: center ;
+    display: block ;
+  }
+  .default-card-container .default-card.block {
+    transform: none ;
+    margin: 0 auto ;
+  }
+  .default-card {
+    padding: 0.5rem ;        
+    max-width: 379px !important;       
+    transform: scale(0.85) ; 
+    transform-origin: top center ;
+  }
+
+  #veterans--active-military {
+    margin-bottom: 0.3rem ;
+  }
+  .default-card p {
+    line-height: 1.2 ;
+    margin-bottom: 0.3rem ;
+  }
+  .default-card blockquote p {
+    height: 28px ;        
+    margin-top: 0.3rem ;
+    padding: 0 0.5rem ;
+  }
 }

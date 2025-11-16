@@ -121,7 +121,9 @@ text-decoration: none;
   .accordion.block p, .accordion.block{
     padding-right: 25px;
   }
-  .accordion.block li::marker {
+  .accordion.block li::before {
+   content: "\25CF";
    color: #fba919;
+   padding-right: 6px;
   }
 }

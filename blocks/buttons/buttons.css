@@ -1,0 +1,52 @@
+
+ .buttons-wrapper {
+ text-align: center;
+ display: contents;
+ padding-bottom: 20px;
+ margin-bottom: 40px;
+} 
+
+/* Button block */
+.buttons.block > div > div h2 {
+  background-color: #fba919;     
+  color: #001D4C;                
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin: 0;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  height: 15px;
+  margin-bottom: 60px;
+}
+
+
+.buttons.block > div > div h2::after {
+  content: "›";   
+  font-size: 29px;
+  margin-left: 5px;
+  padding-bottom: 8px;
+ 
+}
+
+.buttons.block > div > div h2:hover {
+  background-color: #e69c0d;
+}
+
+@media (max-width: 768px) {
+  .buttons-wrapper {
+    justify-content: center;  
+  }
+
+  .buttons.block > div > div h2 {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}

@@ -94,10 +94,12 @@
   .section.accordion-container,
   .section.couponsside-container {
     /* display: block; */
-    width: 50%;
+    width: 45%;
   }
   .couponsside-container .couponsside.block {
     transform: none;
+    margin-left: 110px !important;
+    
   }
   .couponsside-container .couponsside.block picture img {
     max-width: 100%;
@@ -213,13 +215,18 @@ margin-right: 8px;
   color: white;
   padding: 24px;
   /* flex-wrap: wrap; */
-  gap: 24px;
-  line-height: 8px;
+  gap: 50px;
+  line-height: 20px;
+}
+.couponsside-container .couponsside.block > div:nth-child(3) h4 {
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .couponsside-container .couponsside.block > div:nth-child(3) > div:first-child {
   flex: 1;
-  min-width: 200px;
+  /* min-width: 0; */
+  
 }
 .couponsside-container .couponsside.block > div:nth-child(3) > div:first-child p {
   font-size: 15px;
@@ -270,6 +277,10 @@ margin-right: 8px;
   .section.couponsside-container {
     display: block;
     width: 100%;
+  }
+  .couponsside-container .couponsside.block{
+    transform: none !important;
+    margin-left: -35px !important; 
   }
   .couponsside-container .couponsside.block > div:nth-child(3) > div:first-child{
   font-size: 14px;

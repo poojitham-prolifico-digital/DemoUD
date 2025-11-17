@@ -83,26 +83,34 @@
   pointer-events: none; 
    
 }
-/* .listoflinks.block > div:last-child {
-  padding-bottom: 3rem; 
-} */
+/* Fix spacing for 1024px and tablet widths */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .listoflinks-wrapper {
+    padding: 0 40px;   
+    box-sizing: border-box;
+  }
+  .listoflinks.block {
+    column-gap: 3rem; 
+  }
+}
 
-/* Responsive layout */
-@media (max-width: 1024px) {
+/* Tablet layout (768px–991px): */
+@media (max-width: 991px) and (min-width: 768px) {
+  .listoflinks-wrapper {
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+
   .listoflinks.block {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
     row-gap: 2rem;
+    max-width: 700px; 
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 768px) {
-  .listoflinks.block {
-    grid-template-columns: 1fr;
-    row-gap: 1.5rem;
-  }
-}
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .listoflinks-container .default-content-wrapper h3 {
     font-size: 20px;
     line-height: 2rem;

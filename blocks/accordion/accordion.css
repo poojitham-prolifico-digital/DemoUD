@@ -91,12 +91,15 @@ text-decoration: none;
 .accordion.block {
   width: 100%;
   max-width: 550px;
-  padding-left: 60px;
-  padding-right: 2rem; 
+  padding-left: 1px;
+  padding-right: 0; 
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
   box-sizing: border-box; 
+}
+.accordion.block h2{
+  font-size: 28px;
 }
 }
 @media (max-width:768px) {

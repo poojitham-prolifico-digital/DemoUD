@@ -272,8 +272,8 @@ margin-right: 8px;
 .couponsside-container .couponsside.block {
   margin-bottom: 60px; 
 }
-@media (max-width: 768px) {
-    .section.accordion-container,
+@media (max-width: 767px) {
+  .section.accordion-container,
   .section.couponsside-container {
     display: block;
     width: 100%;
@@ -339,4 +339,37 @@ margin-right: 8px;
   gap: 4px;
   padding-bottom: 20px;
 }
+}
+
+@media (max-width: 991px)  and (min-width: 768px){
+  .section.accordion-container,
+  .section.couponsside-container {
+    /* display: block; */
+    width: 45%;
+  }
+  .couponsside-container .couponsside.block {
+    transform: none;
+    margin-left: 110px !important;
+    
+  }
+  .couponsside-container .couponsside.block picture img {
+    max-width: 100%;
+  }
+  .couponsside-container .couponsside.block > div:nth-child(3){
+    gap:8px;
+  }
+  .couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p{
+    width:10px;
+    max-width: 10px;
+    padding: 8px 70px;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+  }
+  .couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p a{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+ 
+  }
 }

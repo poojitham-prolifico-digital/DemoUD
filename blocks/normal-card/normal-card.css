@@ -42,10 +42,16 @@
 }
 .normal-card .nc-title {
     margin: 0;
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     line-height: 1.2;
     font-weight: 800;
     color: #0b0b0b;
+
+}
+@media (min-width: 1024px) {
+    .normal-card .nc-title {
+        white-space: nowrap;
+    }
 }
 
 .normal-card .nc-desc {

@@ -63,7 +63,12 @@ export default function decorate(block) {
     const pic = logoCell.querySelector('picture, img');
     if (pic) logoWrap.appendChild(pic.cloneNode(true));
   }
-  inner.appendChild(logoWrap);
+  const hamburgerBtn = document.createElement('button');
+  hamburgerBtn.type = 'button';
+  hamburgerBtn.className = 'mh-mobile-hamburger';
+  hamburgerBtn.setAttribute('aria-label', 'Toggle navigation');
+  hamburgerBtn.setAttribute('aria-expanded', 'false');
+  hamburgerBtn.innerHTML = '<span></span><span></span><span></span>';
   const reviewsWrap = document.createElement('div');
   reviewsWrap.className = 'mainarea-reviews';
   if (reviewsUrl) {
@@ -122,6 +127,6 @@ export default function decorate(block) {
   rightWrap.classList.add('mainarea-right');
   rightWrap.append(reviewsWrap, ctaWrap);
 
-  inner.append(logoWrap, rightWrap);
+  inner.append(logoWrap, hamburgerBtn, rightWrap);
   block.appendChild(inner);
 }

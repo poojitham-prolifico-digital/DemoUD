@@ -13,7 +13,6 @@
     gap: 1.5rem;
 }
 
-/* full row: logo | reviews | phone + button */
 .mainarea.block .mainarea-inner {
     max-width: 100%;
     margin-left: 20px;
@@ -174,7 +173,7 @@
         width: 100%;
         display: flex;
         justify-content: flex-start !important; /* ⬅ PUSH LOGO LEFT */
-        margin-bottom: 1rem;
+        margin-bottom: 0.85rem;
     }
 
     /* right column content centered */
@@ -257,5 +256,89 @@
         .mainarea-button .label {
             text-transform: uppercase;
             letter-spacing: 0.04em;
+        }
+}
+/* default: hide hamburger on desktop */
+.mh-mobile-hamburger {
+    display: none;
+}
+
+/* mobile styling */
+@media (max-width: 768px) {
+    .mainarea.block .mainarea-inner {
+        position: relative;
+    }
+
+    .mh-mobile-hamburger {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        position: absolute;
+        right: 16px;
+        top: 30px;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+        .mh-mobile-hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #003057;
+        }
+}
+.mh-mobile-hamburger {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .mainarea.block .mainarea-inner {
+        position: relative;
+    }
+    .mh-mobile-hamburger.is-open + .mainarea-right {
+        display: none;
+    }
+
+    .mh-mobile-hamburger {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        position: absolute;
+        right: 16px;
+        top: 30px; 
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        z-index: 1300;
+    }
+
+        .mh-mobile-hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #001d4c;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        /* when menu is open, show X */
+        .mh-mobile-hamburger.is-open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .mh-mobile-hamburger.is-open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mh-mobile-hamburger.is-open span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
         }
 }

@@ -1,4 +1,4 @@
-export default function decorate(block) {
+﻿export default function decorate(block) {
   const searchWrapper = block.querySelector('.icon-search')?.parentElement;
 
   if (searchWrapper) {
@@ -22,6 +22,21 @@ export default function decorate(block) {
 
     wrapper.querySelector('.icon-search').addEventListener('click', () => {
       wrapper.classList.toggle('active');
+    });
+  }
+  //NEW: wire hamburger to open/close mobile megamenu
+  const megaSection = block.closest('.section.megamenu-container');
+  const hamburger = document.querySelector('.mh-mobile-hamburger');
+
+  if (megaSection && hamburger) {
+    hamburger.addEventListener('click', () => {
+      const open = megaSection.classList.toggle('is-open');
+
+      //toggle class on hamburger so CSS can draw the X
+      hamburger.classList.toggle('is-open', open);
+
+      // accessibility
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
 }

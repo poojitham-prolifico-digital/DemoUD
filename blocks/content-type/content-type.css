@@ -96,3 +96,27 @@
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .content-type-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 16px;
+    padding-right: 16px; 
+  }
+  .content-type.block {
+    min-height: auto;
+    padding: 0;
+  }
+  .content-type.block h3{
+    text-align: left;
+    font-size: 17px;
+  }
+  .content-type.block p {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .content-type.block{
+    text-align: center;
+  }
+}

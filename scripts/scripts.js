@@ -148,5 +148,22 @@ async function loadPage() {
   await loadLazy(document);
   loadDelayed();
 }
+(function() {
+  try {
+    var meta = document.querySelector('meta[name="viewport"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'viewport';
+      document.head.appendChild(meta);
+    }
 
+    // Allow zoom-IN but prevent zoom-OUT below initial scale
+    meta.setAttribute(
+      'content',
+      'width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes'
+    );
+  } catch (e) {
+    console.warn('viewport injection failed', e);
+  }
+})();
 loadPage();

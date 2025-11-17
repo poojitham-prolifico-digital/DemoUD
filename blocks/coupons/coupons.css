@@ -134,7 +134,7 @@ margin-right: 8px;
 
 .coupons-container .coupons.block > div:nth-child(3) > div:first-child p {
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.2rem;
   margin-bottom: 12px;
 }
 
@@ -182,14 +182,21 @@ margin-right: 8px;
     align-items: center;
     text-align: center;
   }
-
+  .coupons-container .coupons.block > div:first-child > div:nth-child(2) p:last-child{
+    padding-top: 10px;
+  }
+  .coupons-container .coupons.block > div:nth-child(3) > div:first-child {
+    text-align: left;
+    padding-top: -20px;
+  }
   .coupons-container .coupons.block > div:nth-child(3) > div:last-child {
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 0;
   }
-
   .coupons-container .coupons.block > div:nth-child(3) > div:last-child p {
-    min-width: 120px;
+    padding-top: 10px;
+    margin-top: -10px;
+   width: 200px;
   }
 }

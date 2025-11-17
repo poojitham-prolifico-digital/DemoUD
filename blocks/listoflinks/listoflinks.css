@@ -102,3 +102,38 @@
     row-gap: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .listoflinks-container .default-content-wrapper h3 {
+    font-size: 20px;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-top: 20px;
+  }
+  .listoflinks.block {
+    grid-template-columns: 1fr !important;
+  }
+
+  .listoflinks.block > div {
+    padding:  0;
+  }
+  .listoflinks.block > div:nth-child(3),
+  .listoflinks.block > div:nth-child(6) {
+    margin-bottom: 2.9rem;   
+  }
+  
+  .listoflinks-wrapper {
+    padding: 0 60px !important;   
+    box-sizing: border-box;
+    
+  }
+  .listoflinks.block a.button::after{
+
+  font-size: 22px;
+  right: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  }
+}

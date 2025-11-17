@@ -212,7 +212,7 @@ margin-right: 8px;
   background-color: #001D4C;
   color: white;
   padding: 24px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 24px;
 }
 
@@ -265,17 +265,61 @@ margin-right: 8px;
   margin-bottom: 60px; 
 }
 @media (max-width: 768px) {
-  .coupons-container .coupons.block > div:nth-child(3) {
-    flex-direction: column;
+  .couponsside-container .couponsside.block > div:nth-child(3) > div:first-child{
+  font-size: 14px;
+  margin-bottom: 2px;
+  text-align: left;
+  padding-right: 20px;
+  padding-top: 20px;
+  }
+.couponsside-container .couponsside.block > div:nth-child(3){
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-  }
-  .coupons-container .coupons.block > div:nth-child(3) > div:last-child {
-    flex-direction: row;
-    justify-content: center;
+    background-color: #001D4C;
+    color: white;
+    padding: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
     flex-wrap: wrap;
-  }
-  .couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p {
-    min-width: 120px;
-  }
+    gap: 0;
+    line-height: 2px;
+    display: block;
+}
+ .couponsside-container .couponsside.block > div:nth-child(3) > div:last-child {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-orient: vertical
+}
+.couponsside-container .couponsside.block > div:nth-child(3) > div:last-child p {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 12px;
+  margin-top: 2px;
+  cursor: pointer;
+  border-radius: 24px;
+  width: 180px;
+  line-height: 15px;
+}
+.couponsside-container .couponsside.block{
+  margin-left: -35px;
+  max-width: 100%;
+  width:100%;
+}
+.couponsside-wrapper{
+  max-width: 100%;
+  width:95%;
+}
+.couponsside-container .couponsside.block > div:first-child > div:nth-child(2) p {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding-bottom: 20px;
+}
 }

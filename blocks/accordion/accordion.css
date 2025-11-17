@@ -2,7 +2,6 @@
 .accordion-container {
   width: 100%;
   background-color: #ffffff;
-
   display: flex;
   justify-content: center;
 }
@@ -97,5 +96,34 @@ text-decoration: none;
   .accordion.block {
     max-width: 100%;
     padding: 0 1rem;
+  }
+}
+@media (max-width:768px) {
+  .accordion.block {
+    margin-right: 25px;
+    margin-top: -50px;
+  }
+  .accordion.block h2{
+    font-size: 24px;
+    line-height: 2rem;
+    font-weight: 400;
+    padding-right: 25px;
+    margin-right: 20px;
+  }
+  .accordion.block p, .accordion.block li {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+    margin-right: 35px;
+    padding-right: 25px;
+  }
+  .accordion.block p, .accordion.block{
+    padding-right: 25px;
+  }
+  .accordion.block li::before {
+   content: "\25CF";
+   color: #fba919;
+   padding-right: 6px;
   }
 }

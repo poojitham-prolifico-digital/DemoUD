@@ -30,6 +30,7 @@
 
 .eyebrow a {
   color: rgb(0, 0, 0);
+  font-weight: 600;
 }
 .section .eyebrow-wrapper {
     max-width: 100%;

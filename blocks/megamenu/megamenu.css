@@ -27,6 +27,11 @@ main > .section > div {
   align-items: center;
   
 }
+.section .megamenu-wrapper {
+    justify-self: center;
+    margin: 0 auto;
+
+}
 .megamenu {
   display: flex;
     gap: 38px;

@@ -8,6 +8,7 @@
   top: 44px; 
   left: 0;
   z-index: 1290;
+ 
 }
 
 
@@ -24,11 +25,10 @@
   margin: 0;
   padding: 0;
   color: rgb(0, 0, 0);
-  font-weight: 600; 
 }
 
-
 .eyebrow a {
+  font-weight: 600;
   color: rgb(0, 0, 0);
 }
 .section .eyebrow-wrapper {

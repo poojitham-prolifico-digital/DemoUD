@@ -180,7 +180,7 @@
     .mainarea-right {
         align-items: center;
         max-width: 100%;
-        gap: 12px;
+        gap: 0px;
         background: #001d4c;
         border-bottom: .1875rem solid #fba919;
     }

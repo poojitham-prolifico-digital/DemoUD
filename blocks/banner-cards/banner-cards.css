@@ -96,13 +96,8 @@
         align-items: stretch; /* ⬅ stretch both columns to same height */
     }
 
-    .banner-cards__media,
     .banner-cards__content {
-        height: 100%; /* match grid row height */
-    }
-
-    .banner-cards__content {
-        display: flex; /* optional: keep inner layout nice */
+        display: flex;
         flex-direction: column;
     }
 
@@ -174,5 +169,18 @@
     .section.banner-cards-container > .banner-cards-wrapper {
         padding-left: 28px;
         padding-right: 28px;
+    }
+}
+@media (min-width: 2560px) {
+    .banner-cards {
+        grid-auto-rows: 520px; /* 🔹 card height you want (tweak 480–560px) */
+    }
+
+    .banner-cards__media picture,
+    .banner-cards__media img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        max-height: none;
     }
 }

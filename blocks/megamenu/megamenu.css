@@ -339,3 +339,21 @@ body::before {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    /* reduce space between items */
+    .megamenu {
+        gap: 20px;
+    }
+
+        /* make each tab a bit narrower */
+        .megamenu .button-container a.button {
+            padding: 0.6rem 1.8rem 0.85rem 0.75rem;
+            font-size: 14px;
+        }
+
+    /* slightly narrower search area */
+    .icon-search-wrapper {
+        width: 70px;
+    }
+}

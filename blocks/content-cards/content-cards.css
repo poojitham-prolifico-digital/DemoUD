@@ -74,7 +74,7 @@
 
 @media (max-width: 1200px) {
     .content-cards .cc-grid {
-        grid-template-columns: repeat(2, 360px);
+        grid-template-columns: repeat(3, 360px);
         gap: 40px;
     }
 }
@@ -112,4 +112,10 @@
         padding: 20px;
     }
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+    .content-cards .cc-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px !important;
+        max-width: 100% !important;
+    }
+}

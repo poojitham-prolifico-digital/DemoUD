@@ -50,7 +50,8 @@ export default function decorate(block) {
     btnLabel = btnRaw.trim();
   }
 
-  const reviewsUrl = cfg['reviews-url'] || '';
+  const reviewsUrlDesktop = cfg['reviews-url'] || '';
+  const reviewsUrlMobile = cfg['reviews-url-mobile'] || '';
   const schedulerId = cfg['button-scheduler-id'] || '';
   const extraClass = cfg['button-class'] || '';
   block.innerHTML = '';
@@ -71,18 +72,33 @@ export default function decorate(block) {
   hamburgerBtn.innerHTML = '<span></span><span></span><span></span>';
   const reviewsWrap = document.createElement('div');
   reviewsWrap.className = 'mainarea-reviews';
-  if (reviewsUrl) {
-    const badge = document.createElement('div');
-    badge.className = 'reviews-badge';
-    const iframe = document.createElement('iframe');
-    iframe.src = reviewsUrl;
-    iframe.loading = 'lazy';
-    iframe.width = '100%';
-    iframe.height = '56';
-    iframe.style.border = 'none';
-    iframe.title = 'Google Reviews';
-    badge.appendChild(iframe);
-    reviewsWrap.appendChild(badge);
+  if (reviewsUrlDesktop) {
+    const badgeDesktop = document.createElement('div');
+    badgeDesktop.className = 'reviews-badge reviews-badge--desktop';
+    const iframeDesktop = document.createElement('iframe');
+    iframeDesktop.src = reviewsUrlDesktop;
+    iframeDesktop.loading = 'lazy';
+    iframeDesktop.width = '100%';
+    iframeDesktop.height = '56';
+    iframeDesktop.style.border = 'none';
+    iframeDesktop.title = 'Google Reviews';
+    badgeDesktop.appendChild(iframeDesktop);
+    reviewsWrap.appendChild(badgeDesktop);
+  }
+
+  // Mobile badge
+  if (reviewsUrlMobile) {
+    const badgeMobile = document.createElement('div');
+    badgeMobile.className = 'reviews-badge reviews-badge--mobile';
+    const iframeMobile = document.createElement('iframe');
+    iframeMobile.src = reviewsUrlMobile;
+    iframeMobile.loading = 'lazy';
+    iframeMobile.width = '100%';
+    iframeMobile.height = '56';
+    iframeMobile.style.border = 'none';
+    iframeMobile.title = 'Google Reviews';
+    badgeMobile.appendChild(iframeMobile);
+    reviewsWrap.appendChild(badgeMobile);
   }
   inner.appendChild(reviewsWrap);
   const ctaWrap = document.createElement('div');

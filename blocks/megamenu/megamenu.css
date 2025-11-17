@@ -184,6 +184,9 @@ body::before {
         padding: 16px;
         display: block;
     }
+    .section .megamenu-wrapper {
+        margin: 0 auto;
+    }
 
 
     .megamenu {

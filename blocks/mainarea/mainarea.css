@@ -12,7 +12,9 @@
     align-items: flex-start;
     gap: 1.5rem;
 }
-
+.mainarea-reviews .reviews-badge--mobile {
+    display: none; /* hide mobile badge on desktop */
+}
 .mainarea.block .mainarea-inner {
     max-width: 100%;
     margin-left: 20px;
@@ -47,7 +49,7 @@
 }
 .section .mainarea-wrapper {
     padding: 0px !important;
-    max-width: 100%;
+    margin: 0 auto;
 }
     .mainarea-reviews .reviews-badge iframe {
         width: 420px;
@@ -151,6 +153,9 @@
         .mainarea-button .label {
             font-size: 13px;
         }
+    .mainarea-reviews .reviews-badge--mobile {
+        display: none; /* hide mobile badge on desktop */
+    }
 }
 @media (max-width: 768px) {
     /* whole block becomes one column */
@@ -180,13 +185,36 @@
         border-bottom: .1875rem solid #fba919;
     }
 
+
     .mainarea-reviews {
-        display: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
+
+        .mainarea-reviews .reviews-badge--desktop {
+            display: none; /* hide desktop widget on mobile */
+        }
+
+        .mainarea-reviews .reviews-badge--mobile {
+            display: block; /* show mobile widget */
+        }
+
+            .mainarea-reviews .reviews-badge--mobile iframe {
+                max-width: 140px; /* tweak to match design */
+                height: 32px;
+            }
 
         .mainarea-reviews .reviews-badge iframe {
             max-width: 260px;
-            width: 100%;
+            position: fixed;
+            top: 100px;
+            left: 150px;
+            width: 130px;
+            min-width: 130px;
+            height: 37.8px;
+            border: none;
+            overflow: hidden;
         }
 
     /* phone + button stacked vertically and centered */

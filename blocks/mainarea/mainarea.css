@@ -15,7 +15,7 @@
 
 /* full row: logo | reviews | phone + button */
 .mainarea.block .mainarea-inner {
-    max-width: 1400px;
+    max-width: 100%;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -147,7 +147,7 @@
         height: 57px;
         max-width: 100%;
         padding-left: 10px;
-        Padding-top: 10px;
+       
     }
     .mainarea-logo picture {
         padding-top: 10px;

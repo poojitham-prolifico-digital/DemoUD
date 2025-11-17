@@ -77,3 +77,29 @@ body, main, .section {
     max-width: 100%;
     margin: 0 60px;
 }
+/* 📱 Mobile — center align top menu */
+@media (max-width: 768px) {
+    .topnavbar-wrapper {
+        justify-content: center !important; /* Center whole bar */
+        margin: 0 auto !important;
+        padding: 0 12px !important;
+    }
+
+    .topnavbar.block {
+        justify-content: center !important; /* Center menu items */
+        gap: 20px !important; /* Even spacing */
+    }
+
+        .topnavbar.block > div {
+            justify-content: center !important;
+        }
+
+        .topnavbar.block p {
+            text-align: center !important;
+        }
+}
+@media (max-width: 1200px) and (min-width: 701px) {
+    .topnavbar-wrapper {
+        padding-left: 390px !important;
+    }
+}

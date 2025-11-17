@@ -31,7 +31,7 @@
   text-align: center;
   font-size: 36px;
   font-weight: bold;
-  margin: 80px 0 48px;
+  margin: 30px 0 48px;
   color: white;
   position: relative;
   z-index: 1;
@@ -114,7 +114,7 @@ gap: 4px;
 }
 .review-container .default-content-wrapper:last-of-type {
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 .review-container .default-content-wrapper:last-of-type p {
@@ -171,3 +171,9 @@ gap: 4px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+@media(max-width: 768px) {
+    .review-container .review-wrapper {
+        padding: 0px 0px 0px 25px;
+    }
+}
+    

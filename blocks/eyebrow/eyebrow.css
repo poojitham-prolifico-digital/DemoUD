@@ -48,3 +48,17 @@
     line-height: 1.4;
   }
 }
+/* MOBILE FIX: Eyebrow items in one single line */
+@media (max-width: 768px) {
+    .eyebrow-container,
+    .eyebrow-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .eyebrow-container * {
+            white-space: nowrap; /* text should not break into two lines */
+        }
+}

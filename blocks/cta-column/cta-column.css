@@ -65,4 +65,12 @@
     margin-top: 0;
     align-self: center;
 }
+@media (max-width:768px){
+    .section .cta-column-wrapper {
+        margin: 0 0 0 0 ;
+    }
+    .section.cta-column-container .cta-column.block > div > div:last-child {
+        gap:10px;
+    }
+}
 

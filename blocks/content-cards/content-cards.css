@@ -3,7 +3,6 @@
 }
 .section.content-cards-container > .content-cards-wrapper {
     max-width: 100%;
-    width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -92,3 +91,25 @@
         height: 200px;
     }
 }
+/* --- FIX TABLET VIEW (768px) TO SHOW 2 CARDS --- */
+@media (max-width: 1200px) and (min-width: 701px) {
+    .content-cards .cc-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        max-width: 100% !important;
+    }
+
+        .content-cards .cc-grid li {
+            width: 100%;
+        }
+
+    .content-cards .cc-media picture,
+    .content-cards .cc-media img {
+        height: 250px;
+        object-fit: cover;
+    }
+    .section.content-cards-container > .content-cards-wrapper {
+        padding: 20px;
+    }
+}
+

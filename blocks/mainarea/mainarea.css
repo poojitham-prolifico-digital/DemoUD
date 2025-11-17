@@ -124,11 +124,6 @@
 
 /* responsive tweaks */
 @media (max-width: 1024px) {
-    .mainarea.block .mainarea-inner {
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 16px;
-    }
 
     .mainarea-cta {
         justify-content: center;

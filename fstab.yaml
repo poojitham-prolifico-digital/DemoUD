@@ -1,3 +1,3 @@
 mountpoints:
-  - url: "https://main--demoud--poojitham-prolifico-digital.aem.live/"
-    path: "/"
+  /:
+  - url: "https://author-p12345-e6789.adobeaemcloud.com/bin/franklin.delivery/poojitham-prolifico-digital/DemoUD/main"

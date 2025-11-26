@@ -1,11 +1,16 @@
 {
-  "version": 1,
-  "plugins": [
-    {
-      "id": "sidekick-library",
-      "title": "Library",
-      "url": "/tools/sidekick/library.html",
-      "isLibrary": true
-    }
-  ]
-}
+    "project": "Content Factory",
+    "plugins": [
+      {
+        "id": "library",
+        "title": "Block Library",
+        "environments": [ "edit" ],
+        "isPalette": true,
+        "paletteRect": "top: 50px; bottom: 210px; left: 20px; height: calc(100vh-60px); width: 800px;",
+        "url": "/tools/sidekick/library.html",
+        "includePaths": [ "**.docx**" ],
+        "passConfig": true
+      }
+
+    ]
+  }

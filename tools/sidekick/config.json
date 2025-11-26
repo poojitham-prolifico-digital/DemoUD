@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "sidekick-library",
+      "title": "Library",
+      "url": "/tools/sidekick/library.html",
+      "isLibrary": true
+    }
+  ]
+}

@@ -3,41 +3,6 @@
 	"editors": {
 		"default": {
 			"root": "/",
-			      "definitions": {
-        "blocks": [
-          "accordion",
-          "banner-cards",
-          "bottomfooter",
-          "button",
-          "buttons",
-          "cards",
-          "chatwithus",
-          "columns",
-          "container",
-          "content-cards",
-          "content-type",
-          "cta-columns",
-          "couponsside",
-          "cta-column",
-          "eyebrow",
-          "footer",
-          "form",
-          "fragment",
-          "header",
-          "hero",
-          "hero-image",
-          "horizontalbar",
-          "image",
-          "listoflinks",
-          "mainarea",
-          "megamenu",
-          "normal-card",
-          "review",
-          "text",
-          "title",
-          "topnavbar"
-        ]
-      },
 			"documents": [
 				{
 					"path": "/"
